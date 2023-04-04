@@ -43,7 +43,6 @@ def generate_report(username: str,phone_number:str, purchases: dict): # will tak
     pass 
 
 
-
 # registration 
 
 parser = ArgumentParser(description="Will take as argument user-name and password in order to have access to amazon's datebase")
@@ -89,21 +88,22 @@ if login(username, password):
         option = int(input("Enter your choice (1/2/3): "))
         
         if option == 1:
-            enter_purchase()
+            enter_purchase(purchases)
         elif option == 2:
             if option == 0:
                 print("Please enter at least one purchase")
                 break
-            generate_report()
+            generate_report(username, phone_number, purchases)
+            time.sleep(3)
         elif option == 3:
+            print("...")
+            time.sleep(1)
             print("Quitting program...")
             time.sleep(2)
-            print(f"Thank you for your visit, {username}. Goodbye!")
+            print(f"Thank you for your visit, {username.capitalize()}. Goodbye!")
             sys.exit()     
         else:
-            print("The operation you entered is not valid. Please select from the available options.")   
-        
-    
+            print("Please enter a valid option number.")    
 
     
 
