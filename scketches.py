@@ -19,7 +19,7 @@ purchases = [
     }
 ]
 
-def password_validator(string: str)-> bool:
+def password_validator(string: str)->bool:
     # will return True if the password is valid 
     pass
 
@@ -27,16 +27,18 @@ def phoneNumberValidator(phone_number: str)->bool:
     # will return True if it is a valid german mobile number
     pass
 
-def login(user_name: str, password: str)->bool:
+def login(users_register: dict):
     #will return True if the username and password are correct
+    # return username, password
     pass
+
     
-def enter_purchase():
+def enter_purchase(purchases: dict):
     # The function will save the purchase details in a list of dictionaries
     #at the and will print("Purchase saved.") 
     pass
 
-def generate_report(): # will take information from dictionary 
+def generate_report(username: str,phone_number:str, purchases: dict): # will take information from dictionary 
     #will generate the report and will print it 
     pass 
 
@@ -44,7 +46,7 @@ def generate_report(): # will take information from dictionary
 
 # registration 
 
-parser = ArgumentParser(description="Will take as argument user-name and password in order to have acces to amazon's datebase")
+parser = ArgumentParser(description="Will take as argument user-name and password in order to have access to amazon's datebase")
 parser.add_argument("user_name", type =str, help = "username")
 parser.add_argument("password", type =str, help = "password")
 
