@@ -1,8 +1,8 @@
 # Group 6
- - Bogdan
- - Irina
- - Mazen
- - Max
+ - Bogdan -> enter_purchase/ generate_report
+ - Irina   -> password_validator, project scketches
+ - Mazen   -> phone_validator
+ - Max    -> login function
  
 
 # Introduction
