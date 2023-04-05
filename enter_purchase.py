@@ -1,11 +1,6 @@
 # from 6 to ...
-from argparse import ArgumentParser
-import sys
 import datetime
-import time 
 import re
-
-purchases = []
 
 
 def enter_purchase():
@@ -78,5 +73,3 @@ def enter_purchase():
             continue
             
     purchases.append(user_purchase)
-
-enter_purchase()
