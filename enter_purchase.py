@@ -1,31 +1,24 @@
 # from 6 to ...
-from argparse import ArgumentParser
-import sys
 import datetime
-import time 
 import re
-
-purchases = []
-
 
 def enter_purchase():
     user_purchase = {}
-    #input the date
+    
     while True:
         date_of_purchase = input("Enter the date of the purchase (MM/DD/YYYY or MM-DD-YYYY): ")
-        if re.match(r"\d{2}/\d{2}/\d{4}", date_of_purchase):
-            # if matches MM/DD/YYYY format, convert it to the desired format
-            date_obj = datetime.datetime.strptime(date_of_purchase, "%m/%d/%Y")
-            date_of_purchase = date_obj.strftime("%m/%d/%Y")
-            break
-        elif re.match(r"\d{2}-\d{2}-\d{4}", date_of_purchase):
-            # if  matches MM-DD-YYYY format, convert it to the desired format
-            date_obj = datetime.datetime.strptime(date_of_purchase, "%m-%d-%Y")
+        if re.match(r"\d{2}/\d{2}/\d{4}|\d{2}-\d{2}-\d{4}", date_of_purchase):
+            # if matches convert it to the desired format
+            if "-" in date_of_purchase:
+                date_obj = datetime.datetime.strptime(date_of_purchase, "%m-%d-%Y")
+            else:
+                date_obj = datetime.datetime.strptime(date_of_purchase, "%m/%d/%Y")
             date_of_purchase = date_obj.strftime("%m/%d/%Y")
             break
         else:
             print("Invalid date format. Please enter a date in MM/DD/YYYY or MM-DD-YYYY format.")
-        # save the date to the purchases
+
+    # save the date to the purchases
     user_purchase["date"] = date_of_purchase
     
     # input the item purchased
@@ -78,5 +71,3 @@ def enter_purchase():
             continue
             
     purchases.append(user_purchase)
-
-enter_purchase()
