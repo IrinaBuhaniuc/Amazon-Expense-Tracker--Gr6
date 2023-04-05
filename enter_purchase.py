@@ -2,7 +2,7 @@
 import datetime
 import re
 
-def enter_purchase():
+def enter_purchase(purchases):
     user_purchase = {}
     
     while True:
