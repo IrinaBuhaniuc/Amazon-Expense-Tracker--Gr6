@@ -1,6 +1,16 @@
 from datetime import datetime, date
 import time
 def generate_report(name,phone_number, purchases):
+    '''
+        This function will print the report with expected information. 
+
+            Parameters:
+                    name (str): String with letters
+                    phone_number (str)): Decimal string
+
+            Returns:
+                    it will be printed the report that contains certain information about purchases
+    '''
     def most_expensive_item(list):
         max = 0
         for dict in list:
