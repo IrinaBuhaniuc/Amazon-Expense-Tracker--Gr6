@@ -11,11 +11,11 @@ from phone_validator import phoneNumberValidator
 users_register ={}
 purchases = [
     {
-        "date": "01/04/2023", # date of purchase 
-        "item": "book", #item-name str with at least 3 characters 
-        "cost": 10,   # Cost of the item, including charges on delivery, should be float
-        "weight": 1,  # The weight of the item( should be a float, and in kg)
-        "quantity": 2, #The quantity purchased (should be an integer from 1 and above).
+        # "date": "01/04/2023", # date of purchase 
+        # "item": "book", #item-name str with at least 3 characters 
+        # "cost": 10,   # Cost of the item, including charges on delivery, should be float
+        # "weight": 1,  # The weight of the item( should be a float, and in kg)
+        # "quantity": 2, #The quantity purchased (should be an integer from 1 and above).
     }
 ]
 
