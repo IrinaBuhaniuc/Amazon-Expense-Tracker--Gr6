@@ -2,6 +2,16 @@ import time
 import sys
 
 def login(users_register: dict):
+    '''
+        This function will verify if the entered username and password are correct accord to user_register dictionary.
+
+            Parameters:
+                    user_register (dict): Username as key, password as value
+
+            Returns:
+                    username (str): String of characters (letters,symbols, numbers)
+                    password (str): String of characters (letters,symbols, numbers)
+    '''
     print("\nPlease log in.\n")
     attempts = 0
 
