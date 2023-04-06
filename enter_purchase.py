@@ -3,6 +3,15 @@ import datetime
 import re
 
 def enter_purchase(purchases):
+    '''
+        This function will save purchases that was entered in main dictionary.
+
+            Parameters:
+                    purchases (dict): Dictionary with purchase date, item name, 
+                                      weight, quantity and price as keys, 
+                                      and their values as value.
+
+    '''
     user_purchase = {}
     
     while True:
