@@ -55,8 +55,11 @@ def enter_purchase(purchases):
         try:
             weight = float(input("Enter the weight of the item in kg: "))
             if isinstance(weight, float):
-                user_purchase["weight"] = weight
-                break
+                if user_purchase["cost"] >= weight:
+                    user_purchase["weight"] = weight
+                    break
+                else:
+                    print("Invalid weight. Weight can not be greater than item's cost. Enter valid weight")
             else:
                 print("Invalid weight. Should be a decimal number (e.g., 12.50)")
                 continue
