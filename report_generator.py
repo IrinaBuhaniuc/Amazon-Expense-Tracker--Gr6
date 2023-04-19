@@ -44,7 +44,7 @@ def generate_report(name,phone_number, purchases):
     print("")
     loading()
     time.sleep(1)
-    print("                    -------------------------")
+    print("\n                    -------------------------")
     print("                    | Amazon Expense Report |")
     print("                    ------------------------") 
     all_items_name_and_cost = []
