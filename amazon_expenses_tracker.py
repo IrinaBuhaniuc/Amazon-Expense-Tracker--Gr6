@@ -33,7 +33,8 @@ if __name__ == '__main__':
         users_register[args.user_name] = args.password
         print("\nRegistration successful!\n")
 
-
+    time.sleep(2)
+    os.system("clear")
 
     #Login
 
